@@ -6,7 +6,13 @@ import com.zipcodewilmington.exceptions.InvalidPhoneNumberFormatException;
  * Created by leon on 5/10/17.
  */
 public final class PhoneNumber {
+
     private final String phoneNumberString;
+
+    public String getPhoneNumberString() {
+        return phoneNumberString;
+    }
+
 
     // default constructor is uncallable
     private PhoneNumber() throws InvalidPhoneNumberFormatException {
@@ -33,6 +39,8 @@ public final class PhoneNumber {
     public String getPhoneLineCode() {
         return toString().substring(10, 14);
 }
+
+
 
     @Override
     public String toString() {
